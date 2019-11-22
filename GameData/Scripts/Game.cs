@@ -10,7 +10,7 @@ namespace Kōkako
         private string _currentScene;
 
         //Vårt spel undersöker påverkan av ordningen karaktärerna presenteras
-        bool _tomFirst = true;
+        private bool _tomFirst = true;
 
         public void Init()
         {
@@ -58,10 +58,10 @@ namespace Kōkako
             SceneManager.RemoveScene("CRT");
         }
 
+        //Tar bort Den förra scenen och lägger till en ny
         private void Transition()
         {
-            //Tar bort Den förra scenen och lägger till en ny
-            /*--------------------------------------------------------------------------------------------*/
+            AnimateShutDown();
 
             SceneManager.RemoveScene(_currentScene);
 
